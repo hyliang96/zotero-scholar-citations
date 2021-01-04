@@ -8,6 +8,8 @@ Currently, Zotero doesn't have any special field for the number of citations, th
 
 *IMPORTANT:* in version 1.8 the field for storing the number of citations has been changed from "Call Number" to "Extra" -- please update your column configuration.
 
+ in version 1.9.4 the field for storing the number of citations has been changed from "Extra" to "Call Number" -- please update your column configuration.
+
 The add-on supports both versions of Zotero:
 
 1. Zotero Standalone:
