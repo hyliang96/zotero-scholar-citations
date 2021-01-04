@@ -148,23 +148,23 @@ Zotero.ScholarCitations.updateItem = function(item) {
                     var citations = Zotero.ScholarCitations.getCitationCount(
                             req.responseText);
                     try {
-                        var old = item.getField('extra')
+                        var old = item.getField('callNumber')
                             if (old.length == 0 || old.search(/^\d{5}$/) != -1) {
-                                item.setField('extra', citations);
+                                item.setField('callNumber', citations);
                             } else if (old.search(/^\d{5} *\n/) != -1) {
                                 item.setField(
-                                        'extra',
+                                        'callNumber',
                                         old.replace(/^\d{5} */, citations + ' '));
                             } else if (old.search(/^\d{5} *[^\n]+/) != -1) {
                                 item.setField(
-                                        'extra',
+                                        'callNumber',
                                         old.replace(/^\d{5} */, citations + ' \n'));
                             } else if (old.search(/^\d{5}/) != -1) {
                                 item.setField(
-                                        'extra',
+                                        'callNumber',
                                         old.replace(/^\d{5}/, citations));
                             } else {
-                                item.setField('extra', citations + ' \n' + old);
+                                item.setField('callNumber', citations + ' \n' + old);
                             }
                         item.save();
                     } catch (e) {}
